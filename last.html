@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hossam Pastry Chef Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #fff8e7, #f5deb3, #d2b48c);
+    overflow-x: hidden;
+}
+
+/* DARK MODE */
+.dark {
+    background: #1e1e1e;
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 25px;
+}
+
+.chef-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 5px solid #d4af37;
+    object-fit: cover;
+}
+
+/* BUTTONS */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background: #8b4513;
+    color: white;
+    cursor: pointer;
+}
+
+/* FLOATING EMOJIS (FAST) */
+.emoji {
+    position: fixed;
+    font-size: 24px;
+    animation: floatUp linear infinite;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(1); }
+    100% { transform: translateY(-10vh) scale(1.5); }
+}
+
+/* GALLERY */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    background: #fffaf0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* TITLE INSIDE CARD */
+.card h3 {
+    text-align: center;
+    margin: 10px 0;
+    color: #8b4513;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING EMOJIS -->
+<script>
+const emojis = ["🍰","🧁","🍩","🍪","🥮","🍫"];
+
+for(let i=0;i<12;i++){  // 👈 تقليل العدد (مستوى متوسط)
+    let span = document.createElement("span");
+    span.classList.add("emoji");
+    span.innerText = emojis[Math.floor(Math.random()*emojis.length)];
+    
+    span.style.left = Math.random()*100 + "vw";
+    span.style.animationDuration = (2.5 + Math.random()*3) + "s";
+    span.style.fontSize = (18 + Math.random()*18) + "px";
+    
+    document.body.appendChild(span);
+}
+</script>
+
+<header>
+
+<img src="chef.jpg" class="chef-img">
+
+<h1>Hossam El-Din Hanafy</h1>
+<p>Middle Eastern Pastry Chef</p>
+
+<button onclick="toggleLang()">🌍 Translate</button>
+<button onclick="toggleDark()">🌙 Dark Mode</button>
+
+</header>
+
+<!-- GALLERY -->
+<section class="container">
+
+<div class="card">
+<img src="1.jpg">
+<h3>Image 1</h3>
+</div>
+<div class="card">
+<img src="2.jpg">
+<h3>Image 2</h3>
+</div>
+<div class="card">
+<img src="3.jpg">
+<h3>Image 3</h3>
+</div>
+<div class="card">
+<img src="4.jpg">
+<h3>Image 4</h3>
+</div>
+<div class="card">
+<img src="5.jpg">
+<h3>Image 5</h3>
+</div>
+<div class="card">
+<img src="6.jpg">
+<h3>Image 6</h3>
+</div>
+<div class="card">
+<img src="7.jpg">
+<h3>Image 7</h3>
+</div>
+<div class="card">
+<img src="8.jpg">
+<h3>Image 8</h3>
+</div>
+<div class="card">
+<img src="9.jpg">
+<h3>Image 9</h3>
+</div>
+<div class="card">
+<img src="10.jpg">
+<h3>Image 10</h3>
+</div>
+<div class="card">
+<img src="11.jpg">
+<h3>Image 11</h3>
+</div>
+<div class="card">
+<img src="12.jpg">
+<h3>Image 12</h3>
+</div>
+<div class="card">
+<img src="13.jpg">
+<h3>Image 13</h3>
+</div>
+<div class="card">
+<img src="14.jpg">
+<h3>Image 14</h3>
+</div>
+<div class="card">
+<img src="15.jpg">
+<h3>Image 15</h3>
+</div>
+<div class="card">
+<img src="16.jpg">
+<h3>Image 16</h3>
+</div>
+<div class="card">
+<img src="17.jpg">
+<h3>Image 17</h3>
+</div>
+<div class="card">
+<img src="18.jpg">
+<h3>Image 18</h3>
+</div>
+<div class="card">
+<img src="19.jpg">
+<h3>Image 19</h3>
+</div>
+<div class="card">
+<img src="20.jpg">
+<h3>Image 20</h3>
+</div>
+<div class="card">
+<img src="21.jpg">
+<h3>Image 21</h3>
+</div>
+<div class="card">
+<img src="22.jpg">
+<h3>Image 22</h3>
+</div>
+<div class="card">
+<img src="23.jpg">
+<h3>Image 23</h3>
+</div>
+<div class="card">
+<img src="24.jpg">
+<h3>Image 24</h3>
+</div>
+<div class="card">
+<img src="25.jpg">
+<h3>Image 25</h3>
+</div>
+<div class="card">
+<img src="26.jpg">
+<h3>Image 26</h3>
+</div>
+<div class="card">
+<img src="27.jpg">
+<h3>Image 27</h3>
+</div>
+<div class="card">
+<img src="28.jpg">
+<h3>Image 28</h3>
+</div>
+<div class="card">
+<img src="29.jpg">
+<h3>Image 29</h3>
+</div>
+<div class="card">
+<img src="30.jpg">
+<h3>Image 30</h3>
+</div>
+<div class="card">
+<img src="31.jpg">
+<h3>Image 31</h3>
+</div>
+<div class="card">
+<img src="32.jpg">
+<h3>Image 32</h3>
+</div>
+<div class="card">
+<img src="33.jpg">
+<h3>Image 33</h3>
+</div>
+
+</section>
+
+<script>
+let dark=false;
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+let lang=false;
+function toggleLang(){
+    if(!lang){
+        document.querySelector("p").innerText =
+        "شيف حلواني شرقي بخبرة طويلة في السعودية وليبيا";
+    } else {
+        document.querySelector("p").innerText =
+        "Middle Eastern Pastry Chef";
+    }
+    lang=!lang;
+}
+</script>
+
+</body>
+</html>
